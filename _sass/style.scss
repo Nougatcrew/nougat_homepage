@@ -30,6 +30,7 @@ body {
         grid-template-rows: auto 1fr auto;
         min-height: 100%;
         nav {
+            z-index: 5;
             display: grid;
             background: rgba(20,23,10,.8);
             grid-template-columns: 1fr 5fr 1fr;
@@ -45,7 +46,12 @@ body {
                 padding: 5px;
                 align-items: center;
                 display: flex;
-                width: 90%
+                .link_container {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+                }
+                                //width: 90%
             }
             .logo {
                 padding-left: 5px;
@@ -57,8 +63,8 @@ body {
                 padding-left: 15px;
                 padding-right: 5px;
                 color: $color-pink-neon;
-                font-family: 'antihero', Arial, Helvetica, san-serif;
-                font-size: clamp(1rem, 1.7vw, 1.7rem);
+                font-family: 'eeb', Arial, Helvetica, san-serif;
+                font-size: clamp(1rem, 3vw, 3rem);
 
                 @media screen and (max-width: $small) {
                   font-size: clamp(.5rem, 1vw, 1rem);
@@ -83,32 +89,103 @@ body {
                 background-image: url('https://raw.githubusercontent.com/Nougatcrew/MC_MisterNougat/jekyll/assets/images/punkte.png');
                 background-repeat: repeat-x repeat-y;
                 background-attachment: fixed;
-
             }
             .main {
                 text-align: center;
                 background: $color-slighty-more-dark;
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-                backdrop-filter: blur(7.1px);
-                -webkit-backdrop-filter: blur(7.1px);
-                border: 1px solid $color-more-dark;
-                min-height: 80%;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                border-left: 1px solid $color-more-dark;
+                border-right: 1px solid $color-more-dark;
+                min-height: 100%;
                 padding-bottom: 30px;
                 &.start {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                }
-                .title {
-                    font-family: 'antihero', Arial, Helvetica, san-serif;
-                    font-size: clamp(1.25rem, 5vw, 5rem);
-                    color: $color-pink-neon;
-                    text-shadow: .1em .1em black;
-                    &.big {
-                        font-size: clamp(3rem, 10vw, 10rem);
+                    flex-direction: column;
+                    .container-bg {
+                        width: 100%;
+                        margin-bottom: 40px;
+                        .title {
+                            font-family: 'antihero', Arial, Helvetica, san-serif;
+                            font-size: clamp(1.25rem, 5vw, 5rem);
+                            color: $color-pink-neon;
+                            text-shadow: .1em .1em black;
+                        }
+                        .team_container {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-evenly;
+                            background-color: rgba($color-slighty-more-dark, 0.3);
+                            padding-top: 5rem;
+                            padding-bottom: 5rem;
+                            .team_card {
+                                width: 15rem;
+                                height: 20rem;
+                                border: 1px solid red;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                                .team_card_icon {
+                                    width: 90%;
+                                }
+                                .team_card_title {
+                                    font-family: 'eeb', Arial, Helvetica, san-serif;
+                                    font-size: clamp(1rem, 2rem, 2rem);
+                                    color: $color-pink-neon;
+                                }
+                            }
+                        }
+                        .partner_container {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-evenly;
+                            background-color: rgba($color-slighty-more-dark, 0.3);
+                            padding-top: 5rem;
+                            padding-bottom: 5rem;
+                            .partner_card {
+                                width: 15rem;
+                                height: 20rem;
+                                border: 1px solid red;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                                .partner_card_icon {
+                                    width: 90%;
+                                }
+                                .partner_card_title {
+                                    font-family: 'eeb', Arial, Helvetica, san-serif;
+                                    font-size: clamp(1rem, 2rem, 2rem);
+                                    color: $color-pink-neon;
+                                }
+                            }
+                        }
+                        .events_container {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-evenly;
+                            background-color: rgba($color-slighty-more-dark, 0.3);
+                            padding-top: 5rem;
+                            padding-bottom: 5rem;
+                            .events_card {
+                                width: 15rem;
+                                height: 20rem;
+                                border: 1px solid red;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                                .events_card_icon {
+                                    width: 90%;
+                                }
+                                .events_card_title {
+                                    font-family: 'eeb', Arial, Helvetica, san-serif;
+                                    font-size: clamp(1rem, 2rem, 2rem);
+                                    color: $color-pink-neon;
+                                }
+                            }
+                        }
                     }
                 }
                 #guideFilter {
@@ -159,10 +236,11 @@ body {
             }
         }
         footer {
+            z-index: 5;
             background: $color-more-dark;
             align-items: center;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             color: $color-pink-neon !important;
             font-family: 'eeb', Arial, Helvetica, san-serif;
             text-decoration: none; /* no underline */

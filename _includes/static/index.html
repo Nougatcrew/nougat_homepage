@@ -1,0 +1,48 @@
+            <main class="dots">
+                <space></space>
+                <content class="start main">
+
+                    <div class="container-bg">
+                        <span class="title">Team</span>
+                        <div class="team_container">
+                            {% for post in site.posts reversed  %}
+                                {% if post.layout contains "team" %}
+                                    <a class="team_card" href="#" alt="{post.title}">
+                                        <img class="team_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="team_card_title">{{ post.title }}</span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="container-bg">
+                        <span class="title">Partner</span>
+                        <div class="partner_container">
+                            {% for post in site.posts reversed  %}
+                                {% if post.layout contains "partner" %}
+                                    <a class="partner_card" href="#" alt="{post.title}">
+                                        <img class="partner_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="partner_card_title">{{ post.title }}</span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="container-bg">
+                        <span class="title">Events</span>
+                        <div class="events_container">
+                            {% for post in site.posts reversed  %}
+                                {% if post.layout contains "events" %}
+                                    <a class="events_card" href="#" alt="{post.title}">
+                                        <img class="events_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="events_card_title">{{ post.title }}</span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </content>
+                <space></space>
+            </main>

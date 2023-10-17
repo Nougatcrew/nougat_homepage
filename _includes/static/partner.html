@@ -1,0 +1,14 @@
+        <main class="dots">
+            <space></space>
+            <content class="main">
+                <span class="title">Partner</span>
+                <div id="changelog-container" class="accordion">
+                    {% for post in site.posts reversed  %}
+                        {% if post.layout contains category %}
+                            {%- include components/get_entries.html -%}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </content>
+            <space></space>
+        </main>
