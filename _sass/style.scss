@@ -1,0 +1,182 @@
+$small: 500px;
+$medium: 900px;
+
+html, head, body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    all: unset;
+    cursor: pointer !important;
+}
+
+//* {
+//    border: 1px red solid
+//}
+
+body {
+
+    background: var($color-green-light);
+    background: linear-gradient(56deg, $color-green-light 0%, $color-green-dark 100%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+
+
+    .grid-container {  //some CSS
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100%;
+        nav {
+            display: grid;
+            background: rgba(20,23,10,.8);
+            grid-template-columns: 1fr 5fr 1fr;
+            height: clamp(2.5rem,3.5vw,4rem);
+            align-content: center;
+            @media screen and (max-width: $small) {
+              grid-template-columns: 5fr;
+              padding-left: 5px;
+              padding-right: 5px
+            }
+            .nav-container {
+                height: clamp(2rem, 3vw, 3rem);
+                padding: 5px;
+                align-items: center;
+                display: flex;
+                width: 90%
+            }
+            .logo {
+                padding-left: 5px;
+                max-height: 40px;
+                height: 100%;
+            }
+            .logo-text {
+                padding-top: 7px;
+                padding-left: 15px;
+                padding-right: 5px;
+                color: $color-pink-neon;
+                font-family: 'antihero', Arial, Helvetica, san-serif;
+                font-size: clamp(1rem, 1.7vw, 1.7rem);
+
+                @media screen and (max-width: $small) {
+                  font-size: clamp(.5rem, 1vw, 1rem);
+                }
+            }
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            @media screen and (max-width: $small) {
+              grid-template-columns: 5fr;
+              padding-left: 5px;
+              padding-right: 5px
+            }
+            min-height: 100%;
+            space {
+                @media screen and (max-width: $small) {
+                  display: none;
+                }
+            }
+            &.dots {
+                background-image: url('https://raw.githubusercontent.com/Nougatcrew/MC_MisterNougat/jekyll/assets/images/punkte.png');
+                background-repeat: repeat-x repeat-y;
+                background-attachment: fixed;
+
+            }
+            .main {
+                text-align: center;
+                background: $color-slighty-more-dark;
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(7.1px);
+                -webkit-backdrop-filter: blur(7.1px);
+                border: 1px solid $color-more-dark;
+                min-height: 80%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 30px;
+                &.start {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .title {
+                    font-family: 'antihero', Arial, Helvetica, san-serif;
+                    font-size: clamp(1.25rem, 5vw, 5rem);
+                    color: $color-pink-neon;
+                    text-shadow: .1em .1em black;
+                    &.big {
+                        font-size: clamp(3rem, 10vw, 10rem);
+                    }
+                }
+                #guideFilter {
+                    width: 80%;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+                .accordion {
+                    padding: 0% 10% 0% 10%;
+                    @media screen and (max-width: $small) {
+                        padding: 0% 5px 0% 5px;
+                    }
+                    .accordion-item {
+                        border-color: $color-more-dark !important;
+                    }
+                    .accordion-button {
+                        font-family: 'eeb', Arial, Helvetica, san-serif !important;
+                        font-size: clamp(1rem, 2vw, 2rem) !important;
+                        color: white !important;
+                        background-color: $color-green-dark !important;
+                    }
+                    .accordion-body{
+                        @media screen and (max-width: $small) {
+                            font-size: clamp(.7rem, 1vw, 1rem) !important;
+                        }
+                    }
+                }
+                #changelog-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    text-align: left;
+                    .changelog-item {
+                        border-radius: 11px !important;
+                        .changelog-button {
+                            border-radius: 11px 11px 0px 0px !important;
+                        }
+                        .accordion-body {
+                            .changelog-entrie-list{
+                                margin-left: 2em;
+                            }
+                            .changelog-date{
+                                color: grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            background: $color-more-dark;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: $color-pink-neon !important;
+            font-family: 'eeb', Arial, Helvetica, san-serif;
+            text-decoration: none; /* no underline */
+            font-size: clamp(1rem, 2rem, 3rem);
+            a {
+                color: $color-pink-neon !important;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// Media Queries ===============================================================
+
+    //@import "media_style.scss";
+    @import "color";
+
+// Spec Imports ================================================================
+
+    $unit: 1rem;
+
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+
+// Core CSS ====================================================================
+
+
+// Style CSS ====================================================================
+
+    @import "style.scss";
+
+// Component Imports ===========================================================
