@@ -35,7 +35,7 @@ collections:
   - name: "Events Posts"
     label: "Events Posts"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Events"
     folder: "_posts/events/"
     create: true
     editor:
@@ -47,7 +47,7 @@ collections:
   - name: "Team Posts"
     label: "Team Posts"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Team"
     folder: "_posts/team/"
     create: true
     editor:
@@ -59,7 +59,7 @@ collections:
   - name: "Partner Posts"
     label: "Partner Posts"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Partner"
     folder: "_posts/partner/"
     create: true
     editor:
