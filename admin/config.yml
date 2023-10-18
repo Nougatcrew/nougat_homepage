@@ -40,7 +40,7 @@ collections:
     create: true
     editor:
       preview: true
-    slug: "{{year}}-{{month}}-{{day}}--{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
       *guide-fields
@@ -52,7 +52,7 @@ collections:
     create: true
     editor:
       preview: true
-    slug: "{{year}}-{{month}}-{{day}}--{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
       *guide-fields
@@ -64,7 +64,7 @@ collections:
     create: true
     editor:
       preview: true
-    slug: "{{year}}-{{month}}-{{day}}--{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
       *guide-fields
