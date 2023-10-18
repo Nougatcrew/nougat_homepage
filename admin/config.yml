@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: akurosia/MisterNougatTest
+  repo: Nougatcrew/nougat_homepage
   branch: jekyll
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
