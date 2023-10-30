@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Nougatcrew/nougat_homepage
-  branch: jekyll
+  branch: new_posts
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
   open_authoring: true
@@ -17,6 +17,7 @@ guide-fields: &guide-fields
   - {label: "Author", name: "author", widget: "string"}
   - {label: "Icon", name: "icon", widget: "string"}
   - {label: "Url", name: "url", widget: "string"}
+  - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
 
 collections:
   - name: "Events Posts"
@@ -27,11 +28,10 @@ collections:
     create: true
     editor:
       preview: true
-    slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      - *guide-fields
-      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
+      *guide-fields
   - name: "Team Posts"
     label: "Team Posts"
     delete: false
@@ -43,8 +43,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      - *guide-fields
-      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
+      *guide-fields
   - name: "Partner Posts"
     label: "Partner Posts"
     delete: false
@@ -56,5 +55,4 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      - *guide-fields
-      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
+      *guide-fields
