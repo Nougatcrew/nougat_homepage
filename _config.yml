@@ -57,7 +57,6 @@ exclude:
   - "convert_skills_to_guide_form.py"
   - "ffxiv_guide_xlsx_to_file.py"
   - "generateLinks.py"
-
 sass:
     sass_dir: _sass
     load_paths:
