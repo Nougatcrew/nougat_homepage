@@ -111,14 +111,34 @@ body {
                             color: $color-pink-neon;
                             text-shadow: .1em .1em black;
                         }
-                        .team_container {
+                        .nougat_container {
+                            .about_me {
+                                display: flex;
+                                align-items: center;
+                                width: 80%;
+                                margin: auto;
+                                img {
+                                    height: 250px;
+                                    width: 250px;
+                                }
+                                p {
+                                    color:white;
+                                }
+                            }
+                            #twitch-embed {
+                                width: 60%;
+                                aspect-ratio: 21/10;
+                                margin: auto;
+                            }
+                        }
+                        .mn_container {
                             width: 100%;
                             display: flex;
                             justify-content: space-evenly;
                             background-color: rgba($color-slighty-more-dark, 0.3);
                             padding-top: 5rem;
                             padding-bottom: 5rem;
-                            .team_card {
+                            .mn_card {
                                 width: 15rem;
                                 height: 20rem;
                                 border: 1px solid red;
@@ -126,60 +146,13 @@ body {
                                 flex-direction: column;
                                 justify-content: space-around;
                                 align-items: center;
+                                .mn_card_icon {
+                                    width: 90%;
+                                }
                                 .team_card_icon {
-                                    width: 90%;
+                                    border-radius: 50%;
                                 }
-                                .team_card_title {
-                                    font-family: 'eeb', Arial, Helvetica, san-serif;
-                                    font-size: clamp(1rem, 2rem, 2rem);
-                                    color: $color-pink-neon;
-                                }
-                            }
-                        }
-                        .partner_container {
-                            width: 100%;
-                            display: flex;
-                            justify-content: space-evenly;
-                            background-color: rgba($color-slighty-more-dark, 0.3);
-                            padding-top: 5rem;
-                            padding-bottom: 5rem;
-                            .partner_card {
-                                width: 15rem;
-                                height: 20rem;
-                                border: 1px solid red;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                align-items: center;
-                                .partner_card_icon {
-                                    width: 90%;
-                                }
-                                .partner_card_title {
-                                    font-family: 'eeb', Arial, Helvetica, san-serif;
-                                    font-size: clamp(1rem, 2rem, 2rem);
-                                    color: $color-pink-neon;
-                                }
-                            }
-                        }
-                        .events_container {
-                            width: 100%;
-                            display: flex;
-                            justify-content: space-evenly;
-                            background-color: rgba($color-slighty-more-dark, 0.3);
-                            padding-top: 5rem;
-                            padding-bottom: 5rem;
-                            .events_card {
-                                width: 15rem;
-                                height: 20rem;
-                                border: 1px solid red;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                align-items: center;
-                                .events_card_icon {
-                                    width: 90%;
-                                }
-                                .events_card_title {
+                                .mn_card_title {
                                     font-family: 'eeb', Arial, Helvetica, san-serif;
                                     font-size: clamp(1rem, 2rem, 2rem);
                                     color: $color-pink-neon;

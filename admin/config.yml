@@ -12,24 +12,11 @@ show_preview_links: true
 media_folder: "assets/img"
 locale: 'de'
 
-field_image: &field_image
-  label: "Images"
-  name: "image"
-  widget: "list"
-  fields:
-    - {label: "urlSmall", name: "urlSmall", required: false, allowMultiple: false, widget: "string"}
-    - {label: "url", name: "url", required: false, allowMultiple: false, widget: "string"}
-    - {label: "height", name: "height", required: false, allowMultiple: false, widget: "string"}
-
 guide-fields: &guide-fields
   - {label: "Title", name: "title", widget: "string"}
-  - {label: "page_type", name: "page_type", widget: "string"}
-  - {label: "Date", name: "date", widget: "date"}
-  - *field_image
-  - {label: "terms", name: "terms", widget: "list", fields: [{label: "term", name: "term", required: false, widget: "string"}]}
-  # Hidden fields
-  - {label: "CMS Used", name: "cms", widget: "hidden", default: "netlify-cms"}
-
+  - {label: "Author", name: "author", widget: "string"}
+  - {label: "Icon", name: "icon", widget: "string"}
+  - {label: "Url", name: "url", widget: "string"}
 
 collections:
   - name: "Events Posts"
@@ -43,7 +30,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      *guide-fields
+      - *guide-fields
+      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
   - name: "Team Posts"
     label: "Team Posts"
     delete: false
@@ -55,7 +43,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      *guide-fields
+      - *guide-fields
+      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}
   - name: "Partner Posts"
     label: "Partner Posts"
     delete: false
@@ -67,4 +56,5 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{fields.title}}"
     summary: "{{title.de}} -- {{year}}/{{month}}/{{day}}"
     fields:
-      *guide-fields
+      - *guide-fields
+      - {label: "pre-intro", name: "pre-intro", widget: "string", multiple: true}

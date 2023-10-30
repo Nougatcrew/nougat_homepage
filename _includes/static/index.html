@@ -1,15 +1,35 @@
             <main class="dots">
                 <space></space>
                 <content class="start main">
+                    <div class="container-bg">
+                        <span class="title">Mister Nougat</span>
+                        <div class="nougat_container">
+                            <div class="about_me">
+                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/222e8dfb-8586-4239-bfef-3aee3887df24-profile_image-70x70.png"></img>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                            </div>
+                            <span class="title">Twitch Stream</span>
+                            <div id="twitch-embed"></div>
+                            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                            <script type="text/javascript">
+                              new Twitch.Embed("twitch-embed", {
+                                width: "100%",
+                                height: "100%",
+                                channel: "mister_nougat",
+                                parent: ["nh.akurosia.de"]
+                              });
+                            </script>
+                        </div>
+                    </div>
 
                     <div class="container-bg">
                         <span class="title">Team</span>
-                        <div class="team_container">
+                        <div class="mn_container team_container">
                             {% for post in site.posts reversed  %}
                                 {% if post.layout contains "team" %}
-                                    <a class="team_card" href="#" alt="{post.title}">
-                                        <img class="team_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
-                                        <span class="team_card_title">{{ post.title }}</span>
+                                    <a class="mn_card team_card" href="#" alt="{post.title}">
+                                        <img class="mn_card_icon team_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="mn_card_title team_card_title">{{ post.title }}</span>
                                     </a>
                                 {% endif %}
                             {% endfor %}
@@ -18,12 +38,12 @@
 
                     <div class="container-bg">
                         <span class="title">Partner</span>
-                        <div class="partner_container">
+                        <div class="mn_container partner_container">
                             {% for post in site.posts reversed  %}
                                 {% if post.layout contains "partner" %}
-                                    <a class="partner_card" href="#" alt="{post.title}">
-                                        <img class="partner_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
-                                        <span class="partner_card_title">{{ post.title }}</span>
+                                    <a class="mn_card partner_card" href="#" alt="{post.title}">
+                                        <img class="mn_card_icon partner_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="mn_card_title partner_card_title">{{ post.title }}</span>
                                     </a>
                                 {% endif %}
                             {% endfor %}
@@ -32,12 +52,12 @@
 
                     <div class="container-bg">
                         <span class="title">Events</span>
-                        <div class="events_container">
+                        <div class="mn_container events_container">
                             {% for post in site.posts reversed  %}
                                 {% if post.layout contains "events" %}
-                                    <a class="events_card" href="#" alt="{post.title}">
-                                        <img class="events_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
-                                        <span class="events_card_title">{{ post.title }}</span>
+                                    <a class="mn_card events_card" href="#" alt="{post.title}">
+                                        <img class="mn_card_icon events_card_icon" src="{{post.icon}}" alt="{{post.icon}}"></img>
+                                        <span class="mn_card_title events_card_title">{{ post.title }}</span>
                                     </a>
                                 {% endif %}
                             {% endfor %}
