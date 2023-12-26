@@ -26,7 +26,7 @@ group :jekyll_plugins do
    gem "jekyll-sitemap"
    gem "jekyll-include-cache"
    gem "jekyll-commonmark"
-   #gem "jekyll-admin"
+   gem "jekyll-admin"
    gem 'jekyll-roman'
 end
 gem "webrick", "~> 1.7"
